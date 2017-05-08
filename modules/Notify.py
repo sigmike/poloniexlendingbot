@@ -68,7 +68,7 @@ def send_email(msg, email_login_address, email_login_password, email_smtp_server
         server.sendmail(email_login_address, email_to_addresses, email_text)
         server.close()
     except Exception as e:
-        print("Cound not send email, got error {0}".format(e))
+        print("Could not send email, got error {0}".format(e))
         raise NotificationException(e)
 
 def post_to_pushbullet(msg, token, deviceid):
