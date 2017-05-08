@@ -55,7 +55,7 @@ def send_email(msg, email_login_address, email_login_password, email_smtp_server
     subject = 'Lending bot'
 
     email_text = "\r\n".join(["From: {0}".format(email_login_address),
-                              "To: {0}".format(email_to_addresses),
+                              "To: {0}".format(", ".join(email_to_addresses)),
                               "Subject: {0}".format(subject),
                               "",
                               "{0}".format(msg)
